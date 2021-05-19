@@ -1,0 +1,8 @@
+<div class="file-upload">
+  <span *ngIf="file">{{ file.name }} <span (click)="clearInput()">X</span> </span>
+  <br>
+  <label for="file">Anexar</label>
+  <!-- <input type="file" class="file-input" name="file" id="file"> -->
+  <input #inputFile type="file" class="file-input" name="file" id="file" (change)="selectedFile($event)">
+
+</div>
